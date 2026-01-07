@@ -6,31 +6,48 @@
 </head>
 <body>
 
-<nav>
+<!-- TOP NAVBAR -->
+<nav class="top-nav">
   <h2>Women Safety</h2>
   <a href="index.html">Home</a>
+  <a href="dashboard.html">Dashboard</a>
+  <a href="laws.html">Rules & Laws</a>
   <a href="login.html">Login</a>
 </nav>
 
-<div class="card">
+<!-- SECOND NAVBAR -->
+<div class="sub-nav">
+  <a href="#rules">Safety Rules</a>
+  <a href="#numbers">Helpline</a>
+  <a href="#laws">Acts</a>
+</div>
 
-<h2>🛑 Safety Rules</h2>
+<div class="card" id="lawsContent">
+
+<h2 id="rules">🛑 Women Safety Rules</h2>
+<p>✔ Always stay alert</p>
 <p>✔ Share your location</p>
 <p>✔ Avoid lonely places</p>
 <p>✔ Say NO loudly</p>
-<p>✔ Press SOS if unsafe</p>
+<p>✔ Use SOS button</p>
 
-<button onclick="readText()">🔊 Read Aloud</button>
+<div class="audio-controls">
+<button onclick="startReading()">🔊 Start Reading</button>
+<button onclick="stopReading()">⏹ Stop Reading</button>
+</div>
 
-<h2>📞 Emergency Numbers</h2>
+<h2 id="numbers">📞 Emergency Numbers</h2>
 <p>Women Helpline: <b>181</b></p>
 <p>Police: <b>112</b></p>
 <p>Ambulance: <b>108</b></p>
+<p>Child Helpline: <b>1098</b></p>
 
-<h2>⚖️ Women Safety Laws</h2>
+<h2 id="laws">⚖️ Women Safety Laws</h2>
 <p><b>IPC 354:</b> Bad touch – Jail</p>
 <p><b>IPC 354A:</b> Sexual harassment</p>
+<p><b>IPC 375:</b> Rape – Serious crime</p>
 <p><b>Domestic Violence Act:</b> Protection for women</p>
+<p><b>Dowry Prohibition Act:</b> Illegal dowry demand</p>
 
 </div>
 
