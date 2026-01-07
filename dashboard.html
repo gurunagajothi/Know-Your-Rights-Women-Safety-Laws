@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dashboard</title>
 <link rel="stylesheet" href="css/style.css">
 </head>
@@ -9,21 +11,21 @@
 <nav class="top-nav">
 <h2>Dashboard</h2>
 <a href="laws.html">Rules</a>
-<a href="admin.html">Admin</a>
+<a href="chatbot.html">Help Bot</a>
 <a href="index.html">Logout</a>
 </nav>
 
-<div class="dashboard">
+<div class="card">
 <h2>Welcome 👩</h2>
-
 <button class="sos" onclick="sendSOS()">🚨 SOS</button>
 <button onclick="fakeCall()">📞 Fake Call</button>
-
 <p id="location">Location not shared</p>
+<div id="map" style="height:250px;margin-top:15px;"></div>
 </div>
 
 <script src="js/sos.js"></script>
 <script src="js/fakecall.js"></script>
 <script src="js/panic.js"></script>
+<script src="js/maps.js"></script>
 </body>
 </html>
