@@ -1,23 +1,10 @@
-let speech;
-let isSpeaking = false;
+let synth = window.speechSynthesis;
+let utterance;
 
-function startReading() {
-    if (isSpeaking) return;
-
-    let text = document.getElementById("lawsContent").innerText;
-    speech = new SpeechSynthesisUtterance(text);
-    speech.lang = "en-IN";
-
-    isSpeaking = true;
-
-    speech.onend = () => {
-        isSpeaking = false;
-    };
-
-    window.speechSynthesis.speak(speech);
+function startReading(){
+  stopReading();
+  const text = document.getElementById("lawsContent").innerText;
+  utterance = new SpeechSynthesisUtterance(text);
+  synth.speak(utterance);
 }
-
-function stopReading() {
-    window.speechSynthesis.cancel();
-    isSpeaking = false;
-}
+function stopReading(){ if(synth.speaking) synth.cancel();}
