@@ -1,24 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
 <title>Women Safety</title>
 <link rel="stylesheet" href="css/style.css">
+<link rel="manifest" href="manifest.json">
 </head>
 <body>
 
-<nav>
-  <h2>Women Safety</h2>
-  <a href="index.html">Home</a>
-  <a href="laws.html">Safety Rules & Laws</a>
-  <a href="login.html">Login</a>
+<nav class="top-nav">
+<h2>Women Safety</h2>
+<a href="index.html">Home</a>
+<a href="laws.html">Rules & Laws</a>
+<a href="login.html">Login</a>
+<a href="chatbot.html">Help Bot</a>
 </nav>
 
 <section class="hero">
-  <h1>Your Safety Is Our Priority</h1>
-  <p>Educate. Protect. Empower.</p>
-  <a class="btn" href="login.html">Get Started</a>
+<h1>Your Safety Matters</h1>
+<p>Educate • Protect • Empower</p>
+<button onclick="alert('📱 App Installed from browser menu')">Install App</button>
 </section>
+
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('service-worker.js');
+}
+</script>
 
 </body>
 </html>
