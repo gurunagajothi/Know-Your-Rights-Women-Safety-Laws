@@ -1,10 +1,9 @@
-function sendSOS(){
- navigator.geolocation.getCurrentPosition(pos=>{
-  let msg = `🚨 SOS SENT!
-Lat:${pos.coords.latitude}
-Lng:${pos.coords.longitude}
-SMS sent to trusted contacts (simulated)`;
-  alert(msg);
-  document.getElementById("location").innerText = msg;
- });
+function sendSOS() {
+  navigator.geolocation.getCurrentPosition(pos=>{
+    const lat = pos.coords.latitude;
+    const lng = pos.coords.longitude;
+    document.getElementById("location").innerText = 
+      `🚨 SOS sent! Location: ${lat}, ${lng}`;
+    loadMap(lat,lng);
+  });
 }
