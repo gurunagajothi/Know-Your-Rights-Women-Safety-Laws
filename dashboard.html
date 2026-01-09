@@ -26,6 +26,13 @@
 <!-- ===== MAIN DASHBOARD ===== -->
 <div class="dashboard-container">
 
+  <div class="card danger">
+  <h3>📱 Fake Call</h3>
+  <p>Trigger a fake incoming call to escape unsafe situations.</p>
+  <button onclick="fakeCall()">Trigger Fake Call</button>
+</div>
+
+
   <div class="card">
   <h3>📊 Awareness Progress</h3>
   <canvas id="progressChart"></canvas>
@@ -119,6 +126,16 @@ if (ctx) {
       }]
     }
   });
+}
+
+
+// ===== FAKE CALL FEATURE =====
+function fakeCall() {
+  alert("📞 Incoming Call...\nCaller: MOM ❤️");
+
+  setTimeout(() => {
+    alert("📴 Call Ended");
+  }, 5000);
 }
 
 
