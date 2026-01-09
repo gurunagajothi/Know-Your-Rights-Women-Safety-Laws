@@ -1,0 +1,5 @@
+body { font-family: sans-serif; background: linear-gradient(120deg,#ff5f6d,#ffc371); }
+.title { text-align:center; color:white; }
+.timeline { margin:50px auto; width:70%; }
+.event { background:white; margin:30px; padding:20px; border-radius:15px; opacity:0; transform: translateY(50px); transition:1s; }
+.event.show { opacity:1; transform: translateY(0); }
