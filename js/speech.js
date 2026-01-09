@@ -14,5 +14,5 @@ function pauseReading() {
 }
 
 function stopReading() {
-  if (synth.speaking || synth.paused) synth.cancel();
+  synth.cancel();
 }
