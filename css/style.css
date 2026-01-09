@@ -59,6 +59,17 @@ button:hover{
  background:#e6004c;
 }
 
+.dark-mode {
+  background-color: #121212 !important;
+  color: white !important;
+}
+
+.dark-mode .card {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+
 /* AUDIO BUTTONS */
 .audio-controls{
  text-align:center;
