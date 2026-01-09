@@ -11,3 +11,7 @@ function socialLogin(platform) {
     window.location.href = "dashboard.html";
   }, 1200);
 }
+function logout() {
+  localStorage.clear();
+  window.location.href = "login.html";
+}
