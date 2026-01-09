@@ -1,24 +1,17 @@
-<form id="loginForm">
-  <input type="email" id="email" placeholder="Enter Gmail ID" required>
-  <input type="password" id="password" placeholder="Password (min 6 chars)" required>
+<hr>
 
-  <button type="submit" class="btn btn-danger w-100">Login</button>
+<button type="button" class="social-btn google" onclick="socialLogin('Google')">
+  🔴 Continue with Google
+</button>
 
-  <hr>
+<button type="button" class="social-btn github" onclick="socialLogin('GitHub')">
+  ⚫ Continue with GitHub
+</button>
 
-  <button type="button" onclick="socialLogin('Google')" class="btn btn-outline-danger w-100 mt-2">
-    Continue with Google
-  </button>
+<button type="button" class="social-btn facebook" onclick="socialLogin('Facebook')">
+  🔵 Continue with Facebook
+</button>
 
-  <button type="button" onclick="socialLogin('GitHub')" class="btn btn-outline-dark w-100 mt-2">
-    Continue with GitHub
-  </button>
-
-  <button type="button" onclick="socialLogin('Facebook')" class="btn btn-outline-primary w-100 mt-2">
-    Continue with Facebook
-  </button>
-
-  <button type="button" onclick="socialLogin('Instagram')" class="btn btn-outline-warning w-100 mt-2">
-    Continue with Instagram
-  </button>
-</form>
+<button type="button" class="social-btn instagram" onclick="socialLogin('Instagram')">
+  🟣 Continue with Instagram
+</button>
