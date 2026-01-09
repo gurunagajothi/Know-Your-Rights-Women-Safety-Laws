@@ -69,6 +69,7 @@
 <footer>
   <p>© 2026 Women Safety Project | Frontend Demo</p>
 </footer>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <!-- ===== JAVASCRIPT ===== -->
 <script>
@@ -103,6 +104,23 @@
 if (localStorage.getItem("theme") === "dark") {
   document.body.classList.add("dark");
 }
+
+// ===== FEATURE 3: AWARENESS PROGRESS CHART =====
+const ctx = document.getElementById("progressChart");
+
+if (ctx) {
+  new Chart(ctx, {
+    type: "bar",
+    data: {
+      labels: ["IPC 354", "DV Act", "Cyber Law", "POSH"],
+      datasets: [{
+        label: "Awareness %",
+        data: [70, 85, 60, 90]
+      }]
+    }
+  });
+}
+
 
 </script>
 
