@@ -23,4 +23,72 @@
   </div>
 </nav>
 
-<!-- ===== MAIN DASHBOARD =====
+<!-- ===== MAIN DASHBOARD ===== -->
+<div class="dashboard-container">
+
+  <!-- Profile Card -->
+  <div class="card">
+    <h3>👤 Profile Information</h3>
+    <p><b>Name:</b> <span id="userName"></span></p>
+    <p><b>Email:</b> <span id="userEmail"></span></p>
+  </div>
+
+  <!-- SOS Card -->
+  <div class="card danger">
+    <h3>🚨 Emergency SOS</h3>
+    <p>Click below if you feel unsafe</p>
+    <button onclick="sendSOS()">SEND SOS</button>
+  </div>
+
+  <!-- Awareness Card -->
+  <div class="card">
+    <h3>📘 Awareness</h3>
+    <p>Learn about women safety laws & rights</p>
+    <a href="laws.html" class="btn">Explore Laws</a>
+  </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <p>© 2026 Women Safety Project | Frontend Demo</p>
+</footer>
+
+<!-- ===== JAVASCRIPT ===== -->
+<script>
+  // Check login
+  const user = localStorage.getItem("loggedInUser");
+  const email = localStorage.getItem("userEmail");
+
+  if (!user || !email) {
+    window.location.href = "login.html";
+  }
+
+  document.getElementById("userName").innerText = user;
+  document.getElementById("userEmail").innerText = email;
+
+  // Logout
+  function logout() {
+    localStorage.clear();
+    window.location.href = "login.html";
+  }
+
+  // SOS Demo
+  function sendSOS() {
+    alert("🚨 SOS Triggered!\nEmergency contacts will be notified (Demo).");
+  }
+  function toggleTheme() {
+  document.body.classList.toggle("dark");
+  localStorage.setItem("theme",
+    document.body.classList.contains("dark") ? "dark" : "light"
+  );
+}
+
+if (localStorage.getItem("theme") === "dark") {
+  document.body.classList.add("dark");
+}
+
+</script>
+
+</body>
+</html>
