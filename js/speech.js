@@ -1,10 +1,18 @@
 let synth = window.speechSynthesis;
 let utterance;
 
-function startReading(){
+function startReading() {
   stopReading();
   const text = document.getElementById("lawsContent").innerText;
   utterance = new SpeechSynthesisUtterance(text);
+  utterance.lang = "en-IN";
   synth.speak(utterance);
 }
-function stopReading(){ if(synth.speaking) synth.cancel();}
+
+function pauseReading() {
+  if (synth.speaking) synth.pause();
+}
+
+function stopReading() {
+  if (synth.speaking || synth.paused) synth.cancel();
+}
